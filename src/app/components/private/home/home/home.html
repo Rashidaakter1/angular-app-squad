@@ -1,0 +1,11 @@
+<div class="counter-container">
+  <h2>Counter: {{ count() }}</h2>
+
+  <div class="flex gap-3">
+    <app-button label="Increment +" (click)="increment()" />
+    <app-button label="Decrement -" (click)="decrement()" />
+    <app-button label="Reset" (click)="reset()" />
+  </div>
+
+  <p *ngIf="count() > 10" class="warning">Counter is too high!</p>
+</div>
